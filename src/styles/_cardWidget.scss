@@ -1,27 +1,8 @@
+@import "./variables/colors.scss";
+
 .contador {
   &__icono {
-    color: #fff;
+    color: $colorNaranjaPastel;
     font-size: 2.5rem !important;
-    margin-top: -20px !important;
-  }
-}
-
-@media only screen and (max-width: 1024px) {
-  .contador {
-    &__icono {
-      color: #fff;
-      font-size: 1.8rem !important;
-      margin-top: -10px !important;
-    }
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .contador {
-    &__icono {
-      color: #fff;
-      font-size: 1.5rem !important;
-      margin-top: 0px !important;
-    }
   }
 }
