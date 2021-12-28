@@ -6,10 +6,11 @@
   justify-content: $justifyContent;
 }
 
-@mixin display-flex($align, $display, $justifyContent) {
+@mixin display-flex($align, $display, $justifyContent, $flexWrap) {
   align-items: $align;
   display: $display;
   justify-content: $justifyContent;
+  flex-wrap: $flexWrap;
 }
 
 @mixin font-group($fontFamily, $fontSize, $fontWeight, $color) {
