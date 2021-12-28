@@ -1,0 +1,17 @@
+@import "./mxin/mixin.scss";
+@import "./variables/colors.scss";
+
+.itemListContainer {
+  margin: 0px auto;
+  padding: 20px 0px;
+  width: 85%;
+  height: 100vh;
+  background-color: $colorVioletaDegradado;
+
+  &--titleList {
+    @include font-group(Arial, 2.5rem, bold, $colorNaranjaPastel);
+    padding: 15px;
+    text-align: center;
+    text-transform: uppercase !important;
+  }
+}
