@@ -1,125 +1,105 @@
 @import "./mxin/mixin.scss";
+@import "./variables/colors.scss";
 
 .navBar {
-  @include display-flex(center, flex, space-around);
-  align-self: center;
-  background-color: #fc4c00;
-  font-family: Arial, Helvetica, sans-serif;
-  height: fit-content;
-  padding: 20px 0;
+  background-color: $colorVioleta;
+  height: 130px;
+  position: sticky;
+  top: 0;
   width: 100%;
+  z-index: 99;
 
-  &--logo {
-    grid-column: 2/6;
-    grid-row: 3/4;
-    width: 8rem;
-  }
-
-  &--lista {
-    @include display-flex(baseline, flex, "");
-    list-style: none;
-
-    &__opciones {
-      font-size: 2.5rem;
-      padding: 0 25px;
-      width: fit-content;
-
-      &:hover {
-        cursor: pointer;
-        // color: $green-color;
-      }
-
-      &--icono {
-        color: #fff;
-        font-size: 2.5rem !important;
-
-        &:active,
-        &:visited {
-          color: black;
-          text-decoration: none;
-        }
-      }
-    }
-  }
-}
-
-.navBarMobile {
-  align-self: center;
-  background-color: #fc4c00;
-  display: none;
-  font-family: Arial, Helvetica, sans-serif;
-  height: fit-content;
-  padding: 20px 0;
-  width: 100%;
-
-  &--logo {
-    display: flex;
-    margin: 0px auto;
-    width: 8rem;
-  }
-
-  &--lista {
-    list-style: none;
-
-    &__opciones {
-      color: #fff;
-      font-size: 2.5rem;
-      padding: 10px 0px;
-      width: fit-content;
-
-      &:hover {
-        cursor: pointer;
-      }
-
-      &--icono {
-        color: #fff;
-        font-size: 2.5rem !important;
-
-        &:active,
-        &:visited {
-          color: black;
-          text-decoration: none;
-        }
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 1024px) {
-  .navBar {
-    padding: 10px 0px;
+  &__navBarWrapper {
+    @include display-flex(center, flex, space-between, wrap);
+    height: 100%;
+    margin: auto;
+    max-width: 1300px;
+    width: 100%;
 
     &--logo {
-      width: 7rem;
+      @include display-flex(center, flex, flex-start, wrap);
+      grid-column: 2/6;
+      grid-row: 3/4;
+      width: 8rem;
     }
 
-    &--lista {
-      &__opciones {
-        padding: 0 15px;
+    &--buttonBurguer {
+      display: none;
 
-        &--icono {
-          font-size: 1.8rem !important;
-        }
+      @media (max-width: 960px) {
+        display: flex;
+        color: $colorNaranjaPastel;
+      }
+
+      &__iconOpenMenu,
+      &__iconCloseMenu {
+        font-size: 3rem !important;
       }
     }
-  }
-}
-
-@media (max-width: 768px) {
-  .navBar {
-    display: none;
-  }
-
-  .navBarMobile {
-    display: block;
 
     &--lista {
+      @include display-flex(center, flex, center, "");
+      height: 100%;
+
+      @media (max-width: 960px) {
+        align-items: flex-start;
+        background-color: $colorVioleta;
+        flex-direction: column;
+        height: 90vh;
+        left: -1000px !important;
+        position: absolute;
+        top: 125px;
+        transition: 0.5s all ease-in;
+        width: 100%;
+      }
+
+      &__verMenu {
+        @media (max-width: 960px) {
+          align-items: flex-start;
+          background-color: $colorVioleta;
+          flex-direction: column;
+          height: 90vh;
+          left: 0px !important;
+          position: absolute;
+          top: 125px;
+          transition: 0.5s all ease-in;
+          width: 100%;
+        }
+      }
+
       &__opciones {
-        font-size: 1.5rem;
-        padding: 10px 0px;
+        @include display-flex(center, flex, center, "");
+        height: 100%;
+        padding: 0rem 1.5rem;
+
+        &:hover {
+          background-color: $colorVioeltaOscuro;
+          border-bottom: 0.3rem solid $colorNaranjaPastel;
+          cursor: pointer;
+          transition: 0.4s ease-in;
+        }
+
+        @media (max-width: 960px) {
+          height: 70px;
+        }
 
         &--icono {
-          font-size: 1.5rem !important;
+          color: $colorNaranjaPastel;
+          font-size: 2.5rem !important;
+        }
+
+        &--titulo {
+          display: none;
+
+          @media (max-width: 960px) {
+            color: $colorNaranjaPastel;
+            display: block;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding: 10px 30px;
+            text-transform: uppercase;
+          }
         }
       }
     }
