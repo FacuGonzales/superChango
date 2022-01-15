@@ -19,11 +19,7 @@ const ItemList = () => {
     
     return (
         <div className="itemListContainer--itemsList">
-            {items.map((item)=> {
-                return (
-                <Item item={item} key={item.id} />
-                )
-            })}
+            {items.map((item)=> <Item item={item} key={item.id} />)}
         </div>
     )
 };
