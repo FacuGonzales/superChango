@@ -14,4 +14,8 @@
     text-align: center;
     text-transform: uppercase !important;
   }
+
+  &--itemsList {
+    @include display-grid(center, grid, 30% 30% 30%, 390px 390px, space-around);
+  }
 }
