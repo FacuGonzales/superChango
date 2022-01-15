@@ -1,0 +1,24 @@
+[
+    {
+        "id": 0,
+        "name":"VINO NOVECENTO RAICES MALBEC",
+        "img":"https://statics.dinoonline.com.ar/imagenes/full_600x600_ma/3062714_f.jpg",
+        "precio": 315,
+        "description": "VINO ARGENTINO, MARCA NOVECENTO RAICES MALBEC BOTELLA X 750 CC."
+    },
+    {
+        "id": 1,
+        "name":"CERVEZA PATAGONIA HOPPY LAGER",
+        "img":"https://statics.dinoonline.com.ar/imagenes/full_600x600_ma/3100693_f.jpg",
+        "precio": 239,
+        "description": "CERVEZA PATAGONIA HOPPY LAGER BOTELLA NO RETORNABLE X 730 CC."
+    },
+    {
+        "id": 2,
+        "name":"HAMBURGUESAS DE CARNE SWIFT",
+        "img":"https://statics.dinoonline.com.ar/imagenes/full_600x600_ma/3361329_f.jpg",
+        "precio":1.399,
+        "description": "HAMBURGUESAS DE CARNE SWIFT CLASICA X 20 UN. X 1600 GR."
+    }
+    
+]
