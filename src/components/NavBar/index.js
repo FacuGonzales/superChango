@@ -14,9 +14,9 @@ import CloseIcon from '@mui/icons-material/Close';
 
 import { Tooltip, Fab, Button } from '@mui/material';
 
-import logo from '../assets/logoHeader.png'
+import logo from '../../assets/logoHeader.png'
 
-import CardWidget from './CardWidget';
+import CardWidget from '../CardWidget/Index';
 
 
 
@@ -52,7 +52,7 @@ const NavBar = () => {
                                 <span className='navBar__navBarWrapper--lista__opciones--titulo'>Ofertas</span> 
                             </li>
                         </Tooltip>
-                   
+                    
 
                     
                         <Tooltip title="ELECTRO">
@@ -62,7 +62,7 @@ const NavBar = () => {
                             </li>
                         </Tooltip>
 
-                   
+                    
 
                     
 
@@ -72,7 +72,7 @@ const NavBar = () => {
                                 <span className='navBar__navBarWrapper--lista__opciones--titulo'>Alimentos</span> 
                             </li>
                         </Tooltip>
-                   
+                    
 
                     
                         <Tooltip title="BEBIDAS">
@@ -81,7 +81,7 @@ const NavBar = () => {
                                 <span className='navBar__navBarWrapper--lista__opciones--titulo'>Bebidas</span> 
                             </li>
                         </Tooltip>
-                   
+                    
 
                     
                         <Tooltip title="LIMPIEZA">
@@ -90,7 +90,7 @@ const NavBar = () => {
                                 <span className='navBar__navBarWrapper--lista__opciones--titulo'>Limpieza</span> 
                             </li>
                         </Tooltip>
-                   
+                    
 
                     
                         <Tooltip title="MASCOTAS">
@@ -99,7 +99,7 @@ const NavBar = () => {
                                 <span className='navBar__navBarWrapper--lista__opciones--titulo'>Mascotas</span> 
                             </li>
                         </Tooltip>
-                   
+                    
 
                     
                         <Tooltip title="HOGAR">
@@ -108,7 +108,7 @@ const NavBar = () => {
                                 <span className='navBar__navBarWrapper--lista__opciones--titulo'>Hogar</span> 
                             </li>
                         </Tooltip>
-                   
+                    
 
                     
                         <Tooltip title="AUTOMOTOR">
@@ -117,9 +117,9 @@ const NavBar = () => {
                                 <span className='navBar__navBarWrapper--lista__opciones--titulo'>Automotor</span> 
                             </li>
                         </Tooltip>
-                   
-
                     
+
+                   
                         <Tooltip title="TÚ CARRITO">
                             <li className="navBar__navBarWrapper--lista__opciones">
                                 <CardWidget/>
