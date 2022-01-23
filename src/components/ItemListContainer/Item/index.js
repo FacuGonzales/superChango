@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography';
 import ItemCount from '../../ItemCount';
 
 const Item = ({item}) => {
-    const {id, img, name, precio, description} = item;
+    const {id, img, name, precio, description, stock} = item;
     return (
 
         <Card sx={{ maxWidth: 345 }}>
@@ -26,7 +26,7 @@ const Item = ({item}) => {
                 <Button size="small">Ver producto</Button>
             </CardActions>
 
-            <ItemCount stock="10" initial="1"/>
+            <ItemCount stock={stock} initial="0"/>
         </Card>
     )
 };
