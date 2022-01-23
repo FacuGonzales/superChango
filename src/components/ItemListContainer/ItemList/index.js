@@ -33,17 +33,17 @@ const ItemList = () => {
     
     return (
         <>
-            { categoria ? 
+            {/* { categoria ? 
                 <div className="itemListContainer">                    
                     <div className="itemListContainer--itemsList">
                         {items.map((item)=> <Item item={item} key={item.id} />)}
                     </div> 
                 </div>
-                :
+                : */}
                 <div className="itemListContainer--itemsList">
                     {items.map((item)=> <Item item={item} key={item.id} />)}
                 </div>
-            }
+            {/* } */}
         </>
 
         
