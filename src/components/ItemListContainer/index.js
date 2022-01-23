@@ -1,12 +1,11 @@
 import React from 'react';
-import ItemCount from '../ItemCount';
 import ItemList from './ItemList';
 
-const ItemListContainer = ({greeting}) => {
+const ItemListContainer = () => {
 
     return (
         <section className="itemListContainer">
-            <h1 className="itemListContainer--titleList">{greeting}</h1>
+            <h1 className="itemListContainer--titleList">¡Nuestras Ofertas!</h1>
             
             <ItemList/>
         </section>
