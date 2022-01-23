@@ -55,7 +55,7 @@ const NavBar = () => {
                         </Tooltip>
                     </Link>
 
-                    <Link to="/electro">
+                    <Link to="/category/electro">
                         <Tooltip title="ELECTRO">
                             <li className="navBar__navBarWrapper--lista__opciones">
                                 <TvIcon className='navBar__navBarWrapper--lista__opciones--icono'/>
@@ -65,7 +65,7 @@ const NavBar = () => {
 
                     </Link>
 
-                    <Link to="/alimentos">
+                    <Link to="/category/alimentos">
 
                         <Tooltip title="ALIMENTOS">
                             <li className="navBar__navBarWrapper--lista__opciones">
@@ -75,7 +75,7 @@ const NavBar = () => {
                         </Tooltip>
                     </Link>
 
-                    <Link to="/bebidas">
+                    <Link to="/category/bebidas">
                         <Tooltip title="BEBIDAS">
                             <li className="navBar__navBarWrapper--lista__opciones">
                                 <WineBarIcon className='navBar__navBarWrapper--lista__opciones--icono'/>
@@ -84,7 +84,7 @@ const NavBar = () => {
                         </Tooltip>
                     </Link>
 
-                    <Link to="/limpieza">
+                    <Link to="/category/limpieza">
                         <Tooltip title="LIMPIEZA">
                             <li className="navBar__navBarWrapper--lista__opciones">
                                 <SanitizerIcon className='navBar__navBarWrapper--lista__opciones--icono'/>
@@ -93,7 +93,7 @@ const NavBar = () => {
                         </Tooltip>
                     </Link>
 
-                    <Link to="/mascotas">
+                    <Link to="/category/mascotas">
                         <Tooltip title="MASCOTAS">
                             <li className="navBar__navBarWrapper--lista__opciones">
                                 <PetsIcon className='navBar__navBarWrapper--lista__opciones--icono'/>
@@ -102,7 +102,7 @@ const NavBar = () => {
                         </Tooltip>
                     </Link>
 
-                    <Link to="/hogar">
+                    <Link to="/category/hogar">
                         <Tooltip title="HOGAR">
                             <li className="navBar__navBarWrapper--lista__opciones">
                                 <HomeIcon className='navBar__navBarWrapper--lista__opciones--icono'/>
@@ -111,7 +111,7 @@ const NavBar = () => {
                         </Tooltip>
                     </Link>
 
-                    <Link to="/automotor">
+                    <Link to="/category/automotor">
                         <Tooltip title="AUTOMOTOR">
                             <li className="navBar__navBarWrapper--lista__opciones">
                                 <DirectionsCarIcon className='navBar__navBarWrapper--lista__opciones--icono'/>
