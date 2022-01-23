@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -23,7 +24,9 @@ const Item = ({item}) => {
             </CardContent>
 
             <CardActions>
-                <Button size="small">Ver producto</Button>
+                <Link to={`/detalle/${id}`}>
+                    <Button size="small">Ver producto</Button>
+                </Link>
             </CardActions>
 
             <ItemCount stock={stock} initial="0"/>
