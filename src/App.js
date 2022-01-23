@@ -1,17 +1,25 @@
-// import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router,Route,Switch } from 'react-router-dom';
+
+import ItemDetailContainer from './components/ItemDetailContainer';
 import ItemListContainer from "./components/ItemListContainer";
+import ItemList from './components/ItemListContainer/ItemList';
 import NavBar from "./components/NavBar";
 import "./styles/main.scss";
 
 function App() {
 
-  const mensaje = 'Hola! Soy el primer componente';
+  // const mensaje = 'Hola! Soy el primer componente';
   return (
-    <>
-      <NavBar/>
-
-      <ItemListContainer greeting={mensaje}/>
-    </>
+    <Router>
+        <NavBar/>
+     
+        <Switch>
+          <Route exact component={ ItemListContainer } path="/" />
+          <Route component={ ItemList } path="/:categoria" />
+          <Route component={ ItemDetailContainer } path="/detalle/:id" />
+        </Switch>
+    </Router>
   );
 }
 
