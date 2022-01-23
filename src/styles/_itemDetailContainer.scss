@@ -1,0 +1,43 @@
+@import "./mxin/mixin.scss";
+@import "./variables/colors.scss";
+
+.detailContainer {
+  @include display-flex("", flex, center, "");
+  background-color: $colorGris;
+  margin: 0px auto;
+  width: 80%;
+
+  &--img {
+  }
+
+  &--info {
+    padding: 30px;
+
+    &__title {
+      @include font-group(arial, 2em, bold, $colorVioleta);
+      margin: 30px 0px;
+    }
+
+    &__price {
+      @include font-group(arial, 2em, bold, $colorVioleta);
+      margin: 30px 0px;
+    }
+
+    &__description {
+      @include font-group(arial, 1em, bold, $colorNegro);
+      margin: 30px 0px;
+    }
+
+    &__accions {
+      @include display-flex(center, flex, space-between, "");
+
+      &--button {
+        border-radius: 50%;
+        border: 3px solid $colorVerdePastel;
+        color: $colorVerdePastel;
+        cursor: pointer;
+        padding: 5px;
+      }
+    }
+  }
+}
