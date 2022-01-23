@@ -17,6 +17,7 @@ import { Tooltip, Fab, Button } from '@mui/material';
 import logo from '../../assets/logoHeader.png'
 
 import CardWidget from '../CardWidget/Index';
+import { Link } from 'react-router-dom';
 
 
 
@@ -45,16 +46,16 @@ const NavBar = () => {
                 </div>
                 
                 <ul  className={`${!isOpen ? "navBar__navBarWrapper--lista" : "navBar__navBarWrapper--lista__verMenu"}`}> 
-                    
+                    <Link to="/">
                         <Tooltip title="OFERTAS">
                             <li className="navBar__navBarWrapper--lista__opciones">
                                 <SavingsIcon className='navBar__navBarWrapper--lista__opciones--icono'/>
                                 <span className='navBar__navBarWrapper--lista__opciones--titulo'>Ofertas</span> 
                             </li>
                         </Tooltip>
-                    
+                    </Link>
 
-                    
+                    <Link to="/electro">
                         <Tooltip title="ELECTRO">
                             <li className="navBar__navBarWrapper--lista__opciones">
                                 <TvIcon className='navBar__navBarWrapper--lista__opciones--icono'/>
@@ -62,9 +63,9 @@ const NavBar = () => {
                             </li>
                         </Tooltip>
 
-                    
+                    </Link>
 
-                    
+                    <Link to="/alimentos">
 
                         <Tooltip title="ALIMENTOS">
                             <li className="navBar__navBarWrapper--lista__opciones">
@@ -72,61 +73,61 @@ const NavBar = () => {
                                 <span className='navBar__navBarWrapper--lista__opciones--titulo'>Alimentos</span> 
                             </li>
                         </Tooltip>
-                    
+                    </Link>
 
-                    
+                    <Link to="/bebidas">
                         <Tooltip title="BEBIDAS">
                             <li className="navBar__navBarWrapper--lista__opciones">
                                 <WineBarIcon className='navBar__navBarWrapper--lista__opciones--icono'/>
                                 <span className='navBar__navBarWrapper--lista__opciones--titulo'>Bebidas</span> 
                             </li>
                         </Tooltip>
-                    
+                    </Link>
 
-                    
+                    <Link to="/limpieza">
                         <Tooltip title="LIMPIEZA">
                             <li className="navBar__navBarWrapper--lista__opciones">
                                 <SanitizerIcon className='navBar__navBarWrapper--lista__opciones--icono'/>
                                 <span className='navBar__navBarWrapper--lista__opciones--titulo'>Limpieza</span> 
                             </li>
                         </Tooltip>
-                    
+                    </Link>
 
-                    
+                    <Link to="/mascotas">
                         <Tooltip title="MASCOTAS">
                             <li className="navBar__navBarWrapper--lista__opciones">
                                 <PetsIcon className='navBar__navBarWrapper--lista__opciones--icono'/>
                                 <span className='navBar__navBarWrapper--lista__opciones--titulo'>Mascotas</span> 
                             </li>
                         </Tooltip>
-                    
+                    </Link>
 
-                    
+                    <Link to="/hogar">
                         <Tooltip title="HOGAR">
                             <li className="navBar__navBarWrapper--lista__opciones">
                                 <HomeIcon className='navBar__navBarWrapper--lista__opciones--icono'/>
                                 <span className='navBar__navBarWrapper--lista__opciones--titulo'>Hogar</span> 
                             </li>
                         </Tooltip>
-                    
+                    </Link>
 
-                    
+                    <Link to="/automotor">
                         <Tooltip title="AUTOMOTOR">
                             <li className="navBar__navBarWrapper--lista__opciones">
                                 <DirectionsCarIcon className='navBar__navBarWrapper--lista__opciones--icono'/>
                                 <span className='navBar__navBarWrapper--lista__opciones--titulo'>Automotor</span> 
                             </li>
                         </Tooltip>
-                    
+                    </Link>
 
-                   
+                    <Link to="/carrito">
                         <Tooltip title="TÚ CARRITO">
                             <li className="navBar__navBarWrapper--lista__opciones">
                                 <CardWidget/>
                                 <span className='navBar__navBarWrapper--lista__opciones--titulo'>Tú Carrito</span> 
                             </li>
                         </Tooltip>
-                   
+                    </Link>
                 </ul>
             </div>
         </nav>
