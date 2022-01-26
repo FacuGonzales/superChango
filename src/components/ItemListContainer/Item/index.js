@@ -11,6 +11,7 @@ import ItemCount from '../../ItemCount';
 
 const Item = ({item}) => {
     const {id, img, name, precio, description, stock} = item;
+    
     return (
 
         <Card sx={{ maxWidth: 345 }}>

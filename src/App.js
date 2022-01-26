@@ -1,28 +1,22 @@
 import React from 'react';
-// import { BrowserRouter as Router,Route,Switch } from 'react-router-dom';
+import { BrowserRouter ,Route,Routes } from 'react-router-dom';
 
-// import ItemDetailContainer from './components/ItemDetailContainer';
-// import ItemListContainer from "./components/ItemListContainer";
-// import ItemList from './components/ItemListContainer/ItemList';
-// import NavBar from "./components/NavBar";
-import { Navigation } from './router/Navigation';
+import ItemDetailContainer from './components/ItemDetailContainer';
+import ItemListContainer from "./components/ItemListContainer";
+import NavBar from "./components/NavBar";
 import "./styles/main.scss";
 
 function App() {
-
-  // const mensaje = 'Hola! Soy el primer componente';
   return (
-    // <Router>
-    //     <NavBar/>
-     
-    //     <Switch>
-    //       <Route exact component={ <ItemListContainer/> } path="/" />
-    //       <Route component={ <ItemList/> } path="/category/:categoria" />
-    //       <Route component={ <ItemDetailContainer/> } path="/detalle/:id" />
-    //     </Switch>
-    // </Router>
-
-    <Navigation/>
+    <BrowserRouter>
+      <NavBar/>
+ 
+      <Routes>
+        <Route exact path="/" element={ <ItemListContainer/> } />
+        <Route path="/category/:categoria" element={ <ItemListContainer/> } />
+        <Route path="/item/:id" element={ <ItemDetailContainer/> }  />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

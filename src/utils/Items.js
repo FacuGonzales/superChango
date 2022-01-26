@@ -1,4 +1,4 @@
-[
+const products = [
     {
         "id": 0,
         "name":"VINO NOVECENTO RAICES MALBEC",
@@ -28,3 +28,13 @@
     }
     
 ]
+
+export const getProducts = new Promise((resolve, reject) => {
+    let condition = true;
+
+    if (condition) {
+        setTimeout(() => resolve(products), 2000);
+    } else {
+        reject( 'Error' );
+    }
+})

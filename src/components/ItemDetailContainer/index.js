@@ -1,31 +1,25 @@
-import { useEffect, useState } from "react";
-import { useParams } from 'react-router-dom'
+import React, { useEffect, useState } from "react";
+import { Link, useParams } from 'react-router-dom'
+import { fetchData } from '../../services/FetchData';
 
-import ItemData from '../../utils/Items.json';
 import ItemDetail from "./ItemDetail";
 
 const ItemDetailContainer = () => {
     const [ item, setItem ] = useState({});
-
     const {id} = useParams();
 
-    const db = ItemData;
+    useEffect( () => {
 
+        fetchData().then((response) => {
+            const itemById = response.find( element => element.id === parseInt(id));
+            setItem(itemById);
+        });
+    }, [id]);
 
-    useEffect( ()=>{
-        const _prod = new Promise( (resolve) => {
-            let _item = db.find(element => element.id === parseInt(id));
-
-            setTimeout (()=>{
-                resolve(_item);
-            },2000);
-        })
-
-        _prod.then((response) => setItem(response));
-    }, ); 
-    
     return (
-        <ItemDetail item={item}/>
+        <Link to={ `/item/${id}` }>
+            <ItemDetail item={item}/>
+        </Link>
     )
 };
 

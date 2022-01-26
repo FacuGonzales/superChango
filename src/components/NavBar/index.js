@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import { Link } from 'react-router-dom';
 
 import SavingsIcon from '@mui/icons-material/Savings';
 import TvIcon from '@mui/icons-material/Tv';
@@ -11,15 +11,10 @@ import HomeIcon from '@mui/icons-material/Home';
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import DehazeIcon from '@mui/icons-material/Dehaze';
 import CloseIcon from '@mui/icons-material/Close';
-
-import { Tooltip, Fab, Button } from '@mui/material';
+import { Tooltip } from '@mui/material';
 
 import logo from '../../assets/logoHeader.png'
-
 import CardWidget from '../CardWidget/Index';
-import { Link } from 'react-router-dom';
-
-
 
 const NavBar = () => {
 
@@ -34,7 +29,9 @@ const NavBar = () => {
         <nav className="navBar">
             <div className='navBar__navBarWrapper'>
 
-                <img src={logo} className="navBar__navBarWrapper--logo"/>
+                <Link to="/">
+                    <img src={logo} className="navBar__navBarWrapper--logo"/>
+                </Link>
 
                 <div className="navBar__navBarWrapper--buttonBurguer">
                     { isOpen ? 
@@ -42,7 +39,6 @@ const NavBar = () => {
                         :
                         <DehazeIcon className="navBar__navBarWrapper--buttonBurguer__iconOpenMenu" onClick={toggleOpen}></DehazeIcon> 
                     }
-                    
                 </div>
                 
                 <ul  className={`${!isOpen ? "navBar__navBarWrapper--lista" : "navBar__navBarWrapper--lista__verMenu"}`}> 
@@ -131,9 +127,7 @@ const NavBar = () => {
                 </ul>
             </div>
         </nav>
-       
     );
-
 }
 
 export default NavBar;
