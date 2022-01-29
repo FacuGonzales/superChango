@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchData } from '../../services/FetchData';
+import LoadingComponent from '../../utils/Loading';
 
 import ItemList from './ItemList';
 
@@ -26,7 +27,12 @@ const ItemListContainer = () => {
         <section className="itemListContainer">
             <h1 className="itemListContainer--titleList">¡Nuestras Ofertas!</h1>
             
-            <ItemList items={items}/>
+            { !items.length ?
+                <LoadingComponent/> 
+                :
+                <ItemList items={items}/>
+            }
+           
         </section>
     )
 };
