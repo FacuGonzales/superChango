@@ -1,9 +1,25 @@
-import { Tooltip } from '@mui/material';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { useState, useContext } from 'react';
+import { Link } from 'react-router-dom'
+
+import { Button } from '@mui/material';
+import CheckIcon from '@mui/icons-material/Check';
+
 import ItemCount from '../../ItemCount';
+import { CartContext } from '../../Context';
 
 
 const ItemDetail = ({item}) => {
+
+    const [ confirm, setConfirm ] = useState(false);
+    const { addItem }  = useContext(CartContext);
+    
+    function addToCart(cant) {
+        setConfirm(true);
+
+        if (cant > 0) addItem(item, cant);
+    }
+
+
     return(
         <div className='detailContainer'>
             <img className='detailContainer--img'  src={item.img} alt='Producto'/>
@@ -16,10 +32,17 @@ const ItemDetail = ({item}) => {
                 <p className='detailContainer--info__description'>{item.description}</p>
 
                 <div className='detailContainer--info__accions'>
-                    <Tooltip title="COMPRAR">
-                        <ShoppingCartIcon className='contador__icono detailContainer--info__accions--button'/>
-                    </Tooltip>
-                    <ItemCount className='detailContainer--info__accions--stock' stock={item.stock} initial="1"/>
+                    <span>
+                        {   confirm? 
+                                <Link to="/carrito">
+                                    <Button variant="contained" startIcon={<CheckIcon />}>
+                                        Confirmar Compra
+                                    </Button>
+                                </Link> 
+                            :
+                            <ItemCount className='detailContainer--info__accions--stock' stock={item.stock} initial="1" onClick={ (cantidad) => addToCart(cantidad)}/>
+                        }
+                    </span>
                 </div>
             </div>
         </div>
