@@ -7,10 +7,9 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import ItemCount from '../../ItemCount';
 
 const Item = ({item}) => {
-    const {id, img, name, precio, description, stock} = item;
+    const {id, img, name, precio, description} = item;
     
     return (
 
@@ -29,8 +28,6 @@ const Item = ({item}) => {
                     <Button size="small">Ver producto</Button>
                 </Link>
             </CardActions>
-
-            <ItemCount stock={stock} initial="0"/>
         </Card>
     )
 };
