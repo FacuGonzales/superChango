@@ -1,37 +1,35 @@
 @import "./mxin/mixin.scss";
 
 .contadorContainer {
-  //   @include display-flex(center, flex, space-between);
-  //   padding: 0px 30px;
-
-  //   &--infoContainer {
-  @include display-flex(center, flex, center, "");
   @include font-group(Arial, 1rem, bold, $colorVioeltaOscuro);
 
-  &--stockContainer {
-    padding-right: 50px;
-
-    &__valor {
-      font-size: 20px !important;
-      margin: 15px 0px !important;
-      text-align: center;
-    }
-  }
-
-  &--botonAgregarRestar {
+  &--infoContainer {
     @include display-flex(center, flex, center, "");
 
-    &__botonIcon {
-      font-size: 1.5rem !important;
+    &__stockContainer {
+      padding-right: 50px;
+
+      &--valor {
+        font-size: 20px !important;
+        margin: 15px 0px !important;
+        text-align: center;
+      }
     }
 
-    &__valorInicial {
-      font-size: 20px !important;
-      margin: 15px 0px !important;
-      text-align: center;
+    &__botonAgregarRestar {
+      @include display-flex(center, flex, center, "");
+
+      &--botonIcon {
+        font-size: 1.5rem !important;
+      }
+
+      &--valorInicial {
+        font-size: 20px !important;
+        margin: 15px 0px !important;
+        text-align: center;
+      }
     }
   }
-  //   }
 }
 
 // 1024, 768, 580
@@ -48,23 +46,22 @@
 
 @media (max-width: 580px) {
   .contadorContainer {
-    // &--infoContainer{
+    &--infoContainer {
+      &__stockContainer {
+        &--valor {
+          font-size: 15px !important;
+        }
+      }
 
-    &--stockContainer {
-      &__valor {
-        font-size: 15px !important;
+      &__botonAgregarRestar {
+        &--botonIcon {
+          font-size: 1.2rem !important;
+        }
+
+        &--valorInicial {
+          font-size: 15px !important;
+        }
       }
     }
-
-    &--botonAgregarRestar {
-      &__botonIcon {
-        font-size: 1.2rem !important;
-      }
-
-      &__valorInicial {
-        font-size: 15px !important;
-      }
-    }
-    // }
   }
 }
