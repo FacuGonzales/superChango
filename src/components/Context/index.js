@@ -22,7 +22,7 @@ export const CartProvider = ( {children} ) => {
 
     const addItem = ( item, amount ) => {
         
-        if(isInCart(item.id)){
+        if(isInCart(item.id, amount)){
             return setAlertMessage({
                 text: 'El producto ya se encuentra en tu carrito',
                 severity: 'warning',
@@ -49,8 +49,12 @@ export const CartProvider = ( {children} ) => {
         });
     }
 
-    const isInCart = (itemId) => {
-        return !!items.find(item => item.id === itemId);
+    const isInCart = (itemId, amount) => {
+        let itemInCart = items.find(item => item.id === itemId);
+
+        if(itemInCart && itemInCart.amount === amount) return true;
+       
+        return false;
     }
 
     const clearCart = () => {
@@ -64,17 +68,16 @@ export const CartProvider = ( {children} ) => {
     }
 
     const totalItems = () => {
-        let cantidad = 0;
-        items.forEach(i => cantidad += i.cantidad)
-        setAmount(cantidad)
-        return cantidad
+        setAmount(items.length);
+        return items.length
     }
 
     const totalPrice = () => {
         let suma = 0;
-        items.forEach(i => suma += parseInt(i.precio) * i.cantidad)
+        
+        items.forEach(i => suma += parseInt(i.precio) * i.amount)
         setTotal(suma)
-        return suma
+        return suma;
     }
 
     const handleClose = (event, reason) => {
