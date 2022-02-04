@@ -7,6 +7,7 @@ import { Button, ButtonGroup } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import CreditScoreIcon from '@mui/icons-material/CreditScore';
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
+import CartItem from './CartItem';
 
 const CartContainer = () => {
     const { items, totalItems, totalPrice, clearCart} = useContext(CartContext);
@@ -46,7 +47,10 @@ const CartContainer = () => {
                 <div>
                     <h5>Listado de Productos</h5>
 
+                    <hr></hr>
                     <div>
+                        <CartItem className="cartContainer--comprasContainer__itemContainer"/>
+                       
                         <p>TOTAL: { totalPrice() }</p>
 
                         <p>TOTAL DE PRODUCTOS: { totalItems() }</p>
