@@ -23,11 +23,29 @@ export const CartProvider = ( {children} ) => {
     const addItem = ( item, amount ) => {
         
         if(isInCart(item.id, amount)){
-            return setAlertMessage({
-                text: 'El producto ya se encuentra en tu carrito',
-                severity: 'warning',
-                open: true
-            });
+
+            let itemInCart = items.find(i => i.id === item.id);
+
+            if(itemInCart.amount === amount) {
+                return setAlertMessage({
+                    text: 'El producto ya se encuentra en tu carrito',
+                    severity: 'warning',
+                    open: true
+                });
+            }else{
+                let index = items.indexOf(itemInCart);
+
+                items[index] = { amount: amount, ...item };
+
+                setAlertMessage({
+                    text: `Se agrego ${amount} productos correctamente a tu carrito`,
+                    severity: 'success',
+                    open: true
+                });
+
+                return setItems(items);
+            }
+            
         };
 
         setAlertMessage({
@@ -50,11 +68,13 @@ export const CartProvider = ( {children} ) => {
     }
 
     const isInCart = (itemId, amount) => {
-        let itemInCart = items.find(item => item.id === itemId);
+        // let itemInCart = items.find(item => item.id === itemId);
 
-        if(itemInCart && itemInCart.amount === amount) return true;
+        // if(itemInCart && itemInCart.amount === amount) return true;
        
-        return false;
+        // return false;
+
+        return !!items.find(item => item.id === itemId)
     }
 
     const clearCart = () => {
@@ -68,8 +88,12 @@ export const CartProvider = ( {children} ) => {
     }
 
     const totalItems = () => {
-        setAmount(items.length);
-        return items.length
+        // setAmount(items.length);
+        // return items.length
+        let cantidad = 0;
+        items.forEach(i => cantidad += i.amount)
+        setAmount(cantidad)
+        return cantidad
     }
 
     const totalPrice = () => {
