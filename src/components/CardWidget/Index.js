@@ -5,12 +5,12 @@ import { Badge } from '@mui/material';
 import { CartContext } from '../Context';
 
 const CardWidget = () => {
-    const { items } = useContext(CartContext);
+    const { totalItems } = useContext(CartContext);
     const [itemsCount, setItemsCount] = useState(0);
 
     useEffect(() => {
-        setItemsCount(items.length);
-    }, [items])
+        setItemsCount(totalItems);
+    }, [totalItems])
 
 
     return(
