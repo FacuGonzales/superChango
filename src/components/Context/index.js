@@ -35,7 +35,7 @@ export const CartProvider = ( {children} ) => {
             }else{
                 let index = items.indexOf(itemInCart);
 
-                items[index] = { amount: amount, ...item };
+                items[index].amount += amount;
 
                 setAlertMessage({
                     text: `Se agrego ${amount} productos correctamente a tu carrito`,
