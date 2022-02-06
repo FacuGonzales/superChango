@@ -1,0 +1,74 @@
+@import "../../../styles/mxin/mixin.scss";
+@import "../../../styles/variables/colors.scss";
+
+.container {
+  background-color: $colorVioleta;
+  border-radius: 15px;
+  color: $colorBlanco !important;
+  display: flex;
+  margin: 0px auto;
+  width: 80% !important;
+}
+
+.table {
+  width: 100% !important;
+}
+
+.tbHead {
+  text-transform: uppercase !important;
+}
+
+.tbCellHead {
+  color: $colorNaranjaPastel !important;
+  font-weight: bold !important;
+}
+
+.tbRowBody:hover {
+  background-color: $colorNaranjaPastel !important;
+  cursor: pointer !important;
+  transition: ease-in-out all 0.3s !important;
+}
+
+.tbCell {
+  color: $colorBlanco !important;
+  font-weight: bold !important;
+}
+
+.button {
+  border: 1px solid $colorBlanco !important;
+  color: $colorBlanco !important;
+}
+
+.button:hover {
+  background-color: $colorBlanco !important;
+  border: 1px solid $colorBlanco !important;
+  color: $colorVioleta !important;
+}
+
+.containerPrice {
+  background-color: $colorNaranjaPastel !important;
+  border-radius: 15px;
+  color: $colorBlanco !important;
+  display: flex;
+  margin: 0px auto;
+  width: 80% !important;
+}
+
+@media (max-width: 1024px) {
+  .container,
+  .containerPrice {
+    width: 95% !important;
+  }
+
+  .tbCell,
+  .tbCellHead {
+    font-size: 0.8rem !important;
+  }
+}
+
+@media (max-width: 580px) {
+  .tbCell,
+  .tbCellHead {
+    font-size: 0.5rem !important;
+  }
+}

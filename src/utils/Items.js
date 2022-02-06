@@ -21,7 +21,7 @@ const products = [
         "id": 2,
         "name":"HAMBURGUESAS DE CARNE SWIFT",
         "img":"https://statics.dinoonline.com.ar/imagenes/full_600x600_ma/3361329_f.jpg",
-        "precio":1.399,
+        "precio":1399,
         "description": "HAMBURGUESAS DE CARNE SWIFT CLASICA X 20 UN. X 1600 GR.",
         "stock": 150,
         "category": "alimentos"

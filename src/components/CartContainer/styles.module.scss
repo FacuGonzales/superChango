@@ -1,0 +1,108 @@
+@import "../../styles/mxin/mixin.scss";
+@import "../../styles/variables/colors.scss";
+
+.container {
+  margin: 15px auto;
+  width: 80%;
+}
+
+.title,
+.listTitle {
+  @include font-group(Arial, 2rem, bold, $colorVioeltaOscuro);
+  border-bottom: 1px solid $colorGris;
+  padding: 10px 0px;
+  text-transform: uppercase !important;
+}
+
+.listTitle {
+  border-bottom: none;
+}
+
+.sinProdContainer,
+.listContainer {
+  margin: 60px auto;
+  text-align: center;
+}
+
+.message {
+  @include font-group(Arial, 2rem, bold, $colorVioleta);
+  margin: 100px auto;
+  text-transform: uppercase !important;
+}
+
+.buttonGroup {
+  margin-top: 30px;
+}
+
+.buttonContinuar {
+  background-color: $colorVioleta !important;
+  border: 3px solid $colorVioleta !important;
+  color: $colorBlanco !important;
+  padding: 15px !important;
+}
+
+.buttonContinuar:hover {
+  background-color: $colorBlanco !important;
+  color: $colorVioleta !important;
+}
+
+.buttonVaciar {
+  background-color: $colorRojoEliminar !important;
+  border: 3px solid $colorRojoEliminar !important;
+  color: #fff !important;
+  margin: 0px 10px !important;
+  padding: 15px !important;
+}
+
+.buttonVaciar:hover {
+  background-color: $colorBlanco !important;
+  color: $colorRojoEliminar !important;
+}
+
+.buttonConfirmar {
+  background-color: $colorVerdePastel !important;
+  border: 3px solid $colorVerdePastel !important;
+  color: #fff !important;
+  padding: 15px !important;
+}
+
+.buttonConfirmar:hover {
+  background-color: $colorBlanco !important;
+  color: $colorVerdePastel !important;
+}
+
+@media (max-width: 1024px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .message,
+  .listTitle {
+    font-size: 1rem;
+  }
+
+  .buttonContinuar,
+  .buttonVaciar,
+  .buttonConfirmar {
+    font-size: 0.8rem !important;
+    padding: 10px !important;
+  }
+}
+
+@media (max-width: 580px) {
+  .title {
+    font-size: 1rem;
+  }
+
+  .message,
+  .listTitle {
+    font-size: 0.8rem;
+  }
+
+  .buttonContinuar,
+  .buttonVaciar,
+  .buttonConfirmar {
+    font-size: 0.5rem !important;
+    padding: 5px !important;
+  }
+}
