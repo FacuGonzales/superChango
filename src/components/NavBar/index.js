@@ -98,15 +98,6 @@ const NavBar = () => {
                         </Tooltip>
                     </Link>
 
-                    <Link to="/category/hogar">
-                        <Tooltip title="HOGAR">
-                            <li className="navBar__navBarWrapper--lista__opciones">
-                                <HomeIcon className='navBar__navBarWrapper--lista__opciones--icono'/>
-                                <span className='navBar__navBarWrapper--lista__opciones--titulo'>Hogar</span> 
-                            </li>
-                        </Tooltip>
-                    </Link>
-
                     <Link to="/category/automotor">
                         <Tooltip title="AUTOMOTOR">
                             <li className="navBar__navBarWrapper--lista__opciones">
