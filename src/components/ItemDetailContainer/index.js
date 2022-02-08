@@ -10,16 +10,14 @@ const ItemDetailContainer = () => {
     const {id} = useParams();
 
     useEffect( () => {
-
-        fetchData().then((response) => {
-            const itemById = response.find( element => element.id === parseInt(id));
-            setItem(itemById);
+        fetchData(id).then((response) => {
+            setItem(response);
         });
     }, [id]);
 
     return (
         <Link to={ `/item/${id}` }>
-            { !item ?
+            { !item.id ?
                 <LoadingComponent/> 
                 :
                 <ItemDetail item={item}/>
