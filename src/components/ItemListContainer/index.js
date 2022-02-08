@@ -11,14 +11,12 @@ const ItemListContainer = () => {
     const { categoria } =  useParams();
 
     useEffect( () => {
+        let isOferta = !categoria ? true : false;
 
-        fetchData().then((response) => {
+        fetchData(null, categoria, isOferta).then((response) => {
             let productsList = [];
-            if(categoria){
-                productsList = response.filter( item => item.category === categoria);
-            }else{
-                productsList = response;
-            }
+
+            productsList = response;
             setItems(productsList); 
         });
     }, [categoria]);
