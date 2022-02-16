@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { Badge } from '@mui/material';
 import { CartContext } from '../Context';
+import styles from './styles.module.scss';
 
 const CardWidget = () => {
     const { totalItems } = useContext(CartContext);
@@ -14,8 +15,8 @@ const CardWidget = () => {
 
 
     return(
-        <Badge badgeContent={itemsCount} className='contador' color="success">
-            <ShoppingCartIcon className='contador__icono'/>
+        <Badge badgeContent={itemsCount} color="success">
+            <ShoppingCartIcon className={styles.icono}/>
         </Badge>
     );
 }

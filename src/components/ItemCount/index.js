@@ -5,6 +5,7 @@ import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import styles from './styles.module.scss';
 
 function ItemCount({ stock, initial, onClick }){
     const [ count, setCount ] = useState(parseInt(initial));
@@ -19,36 +20,32 @@ function ItemCount({ stock, initial, onClick }){
 
     const buttons = [
         <Link to="/">
-            <Button variant="outlined" startIcon={<KeyboardBackspaceIcon />}>
+            <Button className={styles.backBtn} variant="outlined" startIcon={<KeyboardBackspaceIcon />}>
                 Volver
             </Button>
         </Link>,
 
-        <Button onClick={()=>onClick(count)} variant="contained" startIcon={<AddShoppingCartIcon />}>
+        <Button className={styles.confirmBtn} onClick={()=>onClick(count)} variant="contained" startIcon={<AddShoppingCartIcon />}>
             Agregar
         </Button>
     ];
 
     return(
 
-        <div className="contadorContainer">
-            <div className="contadorContainer--infoContainer">
+        <div className={styles.container}>
+            <div className={styles.infoContainer}>
+                <p className={styles.title}>Stock disponible: {stock}</p>
 
-                <div className="contadorContainer--infoContainer__stockContainer">
-                    <p className="contadorContainer--infoContainer__stockContainer--valor">Stock disponible: {stock}</p>
-                </div>
+                <div className={styles.botones}>
+                    <RemoveCircleIcon className={styles.btnIcon} onClick={subsctracAmount}></RemoveCircleIcon>
 
-                <div className="contadorContainer--infoContainer__botonAgregarRestar">
-                    <RemoveCircleIcon className="contadorContainer--infoContainer__botonAgregarRestar--botonIcon" onClick={subsctracAmount}></RemoveCircleIcon>
+                    <p className={styles.contador}>{count}</p>
 
-                    <p className="contadorContainer--infoContainer__botonAgregarRestar--valorInicial">{count}</p>
-
-                    <AddCircleIcon className="contadorContainer--infoContainer__botonAgregarRestar--botonIcon" onClick={addAmount}></AddCircleIcon>
+                    <AddCircleIcon className={styles.btnIcon} onClick={addAmount}></AddCircleIcon>
                 </div>
             </div>
 
-
-            <div className="contadorContainer--botonesContainer">
+            <div className={styles.botones}>
                 <ButtonGroup>
                    {buttons}
                 </ButtonGroup>

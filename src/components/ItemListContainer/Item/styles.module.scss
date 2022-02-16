@@ -1,0 +1,111 @@
+@import "../../../styles/mxin/mixin.scss";
+@import "../../../styles/variables/colors.scss";
+
+.container {
+  background-color: $colorVioleta;
+  border-radius: 15px;
+  margin: 0px auto;
+  width: 85%;
+}
+
+.oferta {
+  margin: 15px 0px 15px 300px;
+  position: absolute;
+}
+
+.imgContainer {
+  margin: 0px auto;
+  width: 100% !important;
+}
+
+.image {
+  border-radius: 15px 15px 0px 0px;
+  width: 100%;
+}
+
+// .infoContainer {
+//   @include font-group(Arial, 1.5rem, bold, $colorBlanco);
+// }
+
+.title,
+.price {
+  @include font-group(Arial, 1rem, bold, $colorNaranjaPastel);
+  text-align: center;
+  padding: 5px 0px;
+}
+
+.price {
+  font-size: 2rem;
+}
+
+.description {
+  @include font-group(Arial, 1rem, none, $colorBlanco);
+  text-align: left;
+  padding: 10px 0px;
+}
+
+.acttions {
+  width: 100%;
+}
+
+.button {
+  background-color: $colorVerdePastel !important;
+  border: 3px solid $colorVerdePastel !important;
+  color: $colorBlanco !important;
+  padding: 5px !important;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    margin: 20px auto !important;
+  }
+
+  .oferta {
+    margin-left: 180px !important;
+  }
+
+  .title {
+    font-size: 0.8rem !important;
+  }
+}
+
+@media (max-width: 780px) {
+  .container {
+    margin: 20px auto !important;
+  }
+
+  .oferta {
+    margin-left: 140px !important;
+  }
+
+  .title {
+    font-size: 0.6rem !important;
+  }
+
+  .price {
+    font-size: 1.5rem !important;
+  }
+}
+
+@media (max-width: 580px) {
+  .container {
+    margin: 15px auto !important;
+  }
+
+  .oferta {
+    margin-left: 140px !important;
+  }
+
+  .title {
+    font-size: 0.5rem !important;
+  }
+
+  .price {
+    font-size: 1rem !important;
+  }
+
+  .button {
+    padding: 2px !important;
+  }
+}

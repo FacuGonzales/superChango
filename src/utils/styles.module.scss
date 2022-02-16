@@ -1,0 +1,57 @@
+@import "../styles/variables/colors.scss";
+@import "../styles/mxin/mixin.scss";
+
+.circulo {
+  background: $colorAmarilloOferta;
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+}
+
+.text {
+  @include font-group(Arial, 1rem, bold, $colorBlanco);
+  padding: 35% 0%;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .circulo {
+    height: 75px;
+    width: 75px;
+  }
+
+  .text {
+    font-size: 0.8rem;
+    padding: 40% 0%;
+  }
+}
+
+.loading {
+  display: flex !important;
+  color: $colorVioeltaOscuro !important;
+  height: 100px !important;
+  margin: 100px auto !important;
+  width: 100px !important;
+}
+
+@media (max-width: 780px) {
+  .circulo {
+    height: 60px;
+    width: 60px;
+  }
+
+  .text {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 580px) {
+  .circulo {
+    height: 50px;
+    width: 50px;
+  }
+
+  .text {
+    font-size: 0.5rem;
+  }
+}

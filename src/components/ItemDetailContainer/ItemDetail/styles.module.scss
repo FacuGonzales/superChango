@@ -1,0 +1,157 @@
+@import "../../../styles/mxin/mixin.scss";
+@import "../../../styles/variables/colors.scss";
+
+.container {
+  // @include display-grid(center, grid, 45% 45%, 650px, center);
+  @include display-flex(center, flex, center, "");
+  background-color: $colorGris;
+  height: 85vh;
+  margin: 0px auto;
+  width: 80%;
+}
+
+.imgContainer {
+  width: 40%;
+}
+
+.img {
+  width: 100%;
+}
+
+.infoContainer {
+  padding: 30px;
+}
+
+.title {
+  @include font-group(arial, 2.5em, bold, $colorVioleta);
+  margin: 30px 0px;
+}
+
+.price {
+  @include font-group(arial, 3em, bold, $colorVioleta);
+  margin: 30px 0px;
+}
+
+.description {
+  @include font-group(arial, 1.5em, 400, $colorNegro);
+  margin: 30px 0px;
+}
+
+.accions {
+  @include display-flex(center, flex, space-between, "");
+}
+
+.buttons {
+  border: 3px solid $colorVerdePastel !important;
+  color: #fff !important;
+  background-color: $colorVerdePastel !important;
+  cursor: pointer !important;
+  padding: 20px !important;
+}
+
+// // 1024, 768, 580
+@media (max-width: 1500px) {
+  .container {
+    justify-content: space-between;
+  }
+
+  .infoContainer {
+    padding: 25px;
+    text-align: right;
+  }
+
+  .accions {
+    float: right;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .price {
+    font-size: 2.5rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 10px 0px;
+    margin: 0px auto;
+    width: 100%;
+  }
+
+  .imgContainer {
+    width: 40%;
+  }
+
+  .img {
+    width: 100%;
+  }
+
+  .infoContainer {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: block;
+    height: 100vh;
+  }
+
+  .imgContainer {
+    display: flex;
+    margin: 0px auto;
+    width: 50%;
+  }
+
+  .infoContainer {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .accions {
+    margin: 0px auto;
+    display: flex;
+    float: none;
+    justify-content: center;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .price {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 580px) {
+  .imgContainer {
+    width: 75%;
+  }
+
+  .infoContainer {
+    padding: 0px;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .price {
+    font-size: 1.5rem;
+  }
+
+  .description {
+    font-size: 0.8rem;
+  }
+}

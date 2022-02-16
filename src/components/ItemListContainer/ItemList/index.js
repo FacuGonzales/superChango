@@ -1,9 +1,10 @@
 import Item from '../Item';
+import styles from './styles.module.scss'; 
 
 const ItemList = ({items}) => {
     
     return (
-        <div className="itemListContainer--itemsList">
+        <div className={styles.listado}>
             {items.map((item)=> <Item item={item} key={item.id} />)}
         </div>
     )

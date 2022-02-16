@@ -1,0 +1,32 @@
+@import "../../../styles/mxin/mixin.scss";
+@import "../../../styles/variables/colors.scss";
+
+.listado {
+  @include display-grid(
+    center,
+    grid,
+    25% 25% 25% 25%,
+    450px 550px,
+    space-around
+  );
+}
+
+@media (max-width: 1024px) {
+  .listado {
+    grid-template-columns: 45% 45% !important;
+    grid-template-rows: 415px 450px !important;
+  }
+}
+
+@media (max-width: 780px) {
+  .listado {
+    grid-template-rows: 315px 450px !important;
+  }
+}
+
+@media (max-width: 580px) {
+  .listado {
+    grid-template-columns: 80% !important;
+    grid-template-rows: 385px 415px !important;
+  }
+}

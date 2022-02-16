@@ -1,0 +1,99 @@
+@import "../../styles/mxin/mixin.scss";
+@import "../../styles/variables/colors.scss";
+
+.container {
+  margin: 145px auto !important;
+  width: 80%;
+}
+
+.title {
+  @include font-group(Arial, 2rem, bold, rgb(0, 48, 90));
+  padding: 15px;
+  text-align: center;
+  text-transform: uppercase !important;
+}
+
+.formContainer {
+  text-align: center;
+}
+
+.inputContainer {
+  margin: 10px 0px;
+  width: 100%;
+}
+
+.input {
+  width: 50%;
+}
+
+.btnContainer {
+  margin: 0px auto;
+  width: 50%;
+}
+
+.btnClose {
+  width: 50%;
+  background-color: $colorGris;
+  border: 1px solid $colorGris;
+  color: $colorVioeltaOscuro;
+}
+
+.btnClose:hover {
+  border: 1px solid $colorGris !important;
+  color: $colorVioeltaOscuro;
+}
+
+.btnSend {
+  width: 50%;
+  background-color: $colorVioeltaOscuro;
+  border: 1px solid $colorVioeltaOscuro;
+  color: $colorBlanco;
+}
+
+.btnSend:hover {
+  width: 50%;
+  background-color: $colorBlanco;
+  border: 1px solid $colorVioeltaOscuro;
+  color: $colorVioeltaOscuro;
+}
+
+// 1024, 768, 580
+@media (max-width: 1024px) {
+  .title {
+    font-size: 1.5rem;
+  }
+  .input {
+    width: 80%;
+  }
+
+  .btnContainer {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 1rem;
+  }
+  .input {
+    width: 80%;
+  }
+
+  .btnContainer {
+    width: 100%;
+  }
+}
+
+@media (max-width: 580px) {
+  .title {
+    font-size: 1rem;
+  }
+  .input {
+    width: 80%;
+  }
+
+  .btnClose,
+  .btnSend {
+    font-size: 0.5rem;
+  }
+}

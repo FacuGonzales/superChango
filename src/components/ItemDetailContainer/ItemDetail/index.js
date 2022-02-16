@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { Button } from '@mui/material';
 import CheckIcon from '@mui/icons-material/Check';
 
+import styles from './styles.module.scss'; 
 import ItemCount from '../../ItemCount';
 import { CartContext } from '../../Context';
 
@@ -21,26 +22,28 @@ const ItemDetail = ({item}) => {
 
 
     return(
-        <div className='detailContainer'>
-            <img className='detailContainer--img'  src={item.img} alt='Producto'/>
+        <div className={styles.container}>
+            <div className={styles.imgContainer}>
+                <img className={styles.img}  src={item.img} alt='Producto'/>
+            </div>
 
-            <div className='detailContainer--info'>
-                <h2 className='detailContainer--info__title'>{item.name}</h2>    
+            <div className={styles.infoContainer}>
+                <h2 className={styles.title}>{item.name}</h2>    
 
-                <h5 className='detailContainer--info__price'>$ {item.precio}</h5>
+                <h5 className={styles.price}>$ {item.precio}</h5>
 
-                <p className='detailContainer--info__description'>{item.description}</p>
+                <p className={styles.description}>{item.description}</p>
 
-                <div className='detailContainer--info__accions'>
+                <div className={styles.accions}>
                     <span>
                         {   confirm? 
                                 <Link to="/carrito">
-                                    <Button variant="contained" startIcon={<CheckIcon />}>
+                                    <Button className={styles.buttons} variant="contained" startIcon={<CheckIcon />}>
                                         Confirmar Compra
                                     </Button>
                                 </Link> 
                             :
-                            <ItemCount className='detailContainer--info__accions--stock' stock={item.stock} initial="1" onClick={ (cantidad) => addToCart(cantidad)}/>
+                            <ItemCount stock={item.stock} initial="1" onClick={ (cantidad) => addToCart(cantidad)}/>
                         }
                     </span>
                 </div>

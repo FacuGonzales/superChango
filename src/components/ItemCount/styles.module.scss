@@ -1,0 +1,105 @@
+@import "../../styles/mxin/mixin.scss";
+@import "../../styles/variables/colors.scss";
+
+.container {
+  @include font-group(Arial, 1rem, bold, $colorVioeltaOscuro);
+}
+
+.infoContainer {
+  @include display-flex(center, flex, center, "");
+}
+
+.title {
+  padding-right: 50px;
+  font-size: 20px !important;
+  margin: 15px 0px !important;
+  text-align: center;
+}
+
+.botones {
+  @include display-flex(center, flex, center, "");
+}
+
+.btnIcon {
+  font-size: 1.5rem !important;
+}
+
+.contador {
+  font-size: 20px !important;
+  margin: 15px 0px !important;
+  text-align: center;
+}
+
+.backBtn {
+  background-color: $colorBlanco !important;
+  border: 1px solid $colorBlanco !important;
+  color: $colorNegro !important;
+  margin: 0px 15px !important;
+  padding: 15px !important;
+}
+
+.backBtn:hover {
+  background-color: $colorVioleta !important;
+  border: 1px solid $colorBlanco !important;
+  color: $colorBlanco !important;
+}
+
+.confirmBtn {
+  background-color: $colorVerdePastel !important;
+  border: 1px solid $colorVerdePastel !important;
+  color: $colorBlanco !important;
+}
+
+.confirmBtn:hover {
+  background-color: $colorBlanco !important;
+  border: 1px solid $colorBlanco !important;
+  color: $colorVerdePastel !important;
+}
+
+// // 1024, 768, 580
+
+@media (max-width: 1500px) {
+  .title {
+    padding-right: 15px;
+    font-size: 1.2rem !important;
+    margin: 15px 0px !important;
+    text-align: center;
+  }
+
+  .btnIcon {
+    font-size: 1.2rem !important;
+  }
+
+  .contador {
+    font-size: 1.2rem !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    display: block;
+    padding: 0px;
+  }
+}
+
+@media (max-width: 580px) {
+  .title {
+    font-size: 0.8rem !important;
+  }
+
+  .btnIcon {
+    font-size: 1rem !important;
+  }
+
+  .contador {
+    font-size: 1rem !important;
+  }
+
+  .backBtn {
+    background-color: $colorBlanco !important;
+    border: 1px solid $colorBlanco !important;
+    color: $colorNegro !important;
+    margin: 0px 5px !important;
+    padding: 10px !important;
+  }
+}

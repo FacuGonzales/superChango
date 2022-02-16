@@ -24,7 +24,7 @@ const CartContainer = () => {
             Vacíar Carrito
         </Button>,
 
-        <Link to="/confirmarCompra">
+        <Link to="/confirm">
             <Button className={styles.buttonConfirmar} variant="outlined" startIcon={<CreditScoreIcon />}>
                 Confirmar Compra
             </Button>
@@ -42,9 +42,7 @@ const CartContainer = () => {
 
                         {buttons[0]}
                     </div>
-
                 :
-
                 <div className={styles.listContainer}>
                     <h5 className={styles.listTitle}>Listado de Productos</h5>
 
