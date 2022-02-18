@@ -6,13 +6,16 @@ import { CartContext } from '../Context';
 import styles from './styles.module.scss';
 
 const CardWidget = () => {
-    const { totalItems } = useContext(CartContext);
+    const { items } = useContext(CartContext);
     const [itemsCount, setItemsCount] = useState(0);
 
     useEffect(() => {
-        setItemsCount(totalItems);
-    }, [totalItems])
-
+        let cantidad = 0;
+        items.forEach(i => cantidad += i.amount)
+        setItemsCount(cantidad);
+            // setItemsCount(totalItems);
+        
+    }, [items])
 
     return(
         <Badge badgeContent={itemsCount} color="success">

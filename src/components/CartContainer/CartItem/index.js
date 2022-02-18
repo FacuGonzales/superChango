@@ -27,7 +27,7 @@ const CartItem = () => {
                     <TableHead className={styles.tbHead}>
                         <TableRow className={styles.tbRowHead}>
                             {
-                                _th.map((colum) => <TableCell className={styles.tbCellHead} align="center">{colum}</TableCell>)
+                                _th.map((colum) => <TableCell className={styles.tbCellHead} align="center" key={colum}>{colum}</TableCell>)
                             }
                         </TableRow>
                     </TableHead>

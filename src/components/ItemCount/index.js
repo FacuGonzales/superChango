@@ -19,13 +19,13 @@ function ItemCount({ stock, initial, onClick }){
     }
 
     const buttons = [
-        <Link to="/">
-            <Button className={styles.backBtn} variant="outlined" startIcon={<KeyboardBackspaceIcon />}>
+        <Link to="/" key='backBtn'>
+            <Button className={styles.backBtn} variant="outlined" startIcon={<KeyboardBackspaceIcon />}   >
                 Volver
             </Button>
         </Link>,
 
-        <Button className={styles.confirmBtn} onClick={()=>onClick(count)} variant="contained" startIcon={<AddShoppingCartIcon />}>
+        <Button className={styles.confirmBtn} onClick={()=>onClick(count)} variant="contained" startIcon={<AddShoppingCartIcon />}  key='confirmBtn'>
             Agregar
         </Button>
     ];

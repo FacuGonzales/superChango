@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from 'react-router-dom'
+import {  useParams } from 'react-router-dom'
 import { fetchData } from '../../services/FetchData';
 import LoadingComponent from "../../utils/Loading";
 
@@ -16,13 +16,14 @@ const ItemDetailContainer = () => {
     }, [id]);
 
     return (
-        <Link to={ `/item/${id}` }>
+        <span>
+
             { !item.id ?
                 <LoadingComponent/> 
                 :
                 <ItemDetail item={item}/>
             }
-        </Link>
+        </span>
     )
 };
 

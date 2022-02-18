@@ -14,17 +14,17 @@ const CartContainer = () => {
     const { items, clearCart} = useContext(CartContext);
 
     const buttons = [
-        <Link to="/">
+        <Link to="/" key='buttonContinuar'>
             <Button className={styles.buttonContinuar} variant="outlined" startIcon={<KeyboardBackspaceIcon />}>
                 Continuar Comprando
             </Button>
         </Link>,
 
-        <Button className={styles.buttonVaciar} variant="outlined" aria-label="upload picture" component="span" onClick={ () => clearCart() } startIcon={<DeleteIcon />}>
+        <Button className={styles.buttonVaciar} key='buttonVaciar' variant="outlined" aria-label="upload picture" component="span" onClick={ () => clearCart() } startIcon={<DeleteIcon />}>
             Vacíar Carrito
         </Button>,
 
-        <Link to="/confirm">
+        <Link to="/confirm" key='buttonConfirmar'>
             <Button className={styles.buttonConfirmar} variant="outlined" startIcon={<CreditScoreIcon />}>
                 Confirmar Compra
             </Button>
