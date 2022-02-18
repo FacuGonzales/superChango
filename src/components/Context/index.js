@@ -68,12 +68,6 @@ export const CartProvider = ( {children} ) => {
     }
 
     const isInCart = (itemId, amount) => {
-        // let itemInCart = items.find(item => item.id === itemId);
-
-        // if(itemInCart && itemInCart.amount === amount) return true;
-       
-        // return false;
-
         return !!items.find(item => item.id === itemId)
     }
 
@@ -88,8 +82,6 @@ export const CartProvider = ( {children} ) => {
     }
 
     const totalItems = () => {
-        // setAmount(items.length);
-        // return items.length
         let cantidad = 0;
         items.forEach(i => cantidad += i.amount)
         setAmount(cantidad)
@@ -116,8 +108,19 @@ export const CartProvider = ( {children} ) => {
         });
     };
 
+
+    const orderSuccess = (id) => {
+        setItems([]);
+
+        setAlertMessage({
+            text: `Se generó con éxito su orden. Número: ${id}`,
+            severity: 'success',
+            open: true
+        });
+    }
+
     return (
-        <CartContext.Provider value={{ addItem, removeItem, clearCart, isInCart, totalItems, totalPrice, items, cantidad:amount, total:total, }}>
+        <CartContext.Provider value={{ addItem, removeItem, clearCart, isInCart, totalItems, totalPrice, orderSuccess, items, cantidad:amount, total:total, alertMessage}}>
             {children}
 
             <Snackbar open={alertMessage.open} autoHideDuration={3000} onClose={handleClose} anchorOrigin={positionSnackbars}>

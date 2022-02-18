@@ -3,6 +3,7 @@
 
 .container {
   margin: 145px auto !important;
+  text-align: center;
   width: 80%;
 }
 
@@ -33,28 +34,28 @@
 
 .btnClose {
   width: 50%;
-  background-color: $colorGris;
-  border: 1px solid $colorGris;
-  color: $colorVioeltaOscuro;
+  background-color: $colorGris !important;
+  border: 1px solid $colorGris !important;
+  color: $colorVioeltaOscuro !important;
 }
 
 .btnClose:hover {
   border: 1px solid $colorGris !important;
-  color: $colorVioeltaOscuro;
+  color: $colorVioeltaOscuro !important;
 }
 
 .btnSend {
   width: 50%;
-  background-color: $colorVioeltaOscuro;
-  border: 1px solid $colorVioeltaOscuro;
-  color: $colorBlanco;
+  background-color: $colorVioeltaOscuro !important;
+  border: 1px solid $colorVioeltaOscuro !important;
+  color: $colorBlanco !important;
 }
 
 .btnSend:hover {
   width: 50%;
-  background-color: $colorBlanco;
-  border: 1px solid $colorVioeltaOscuro;
-  color: $colorVioeltaOscuro;
+  background-color: $colorBlanco !important;
+  border: 1px solid $colorVioeltaOscuro !important;
+  color: $colorVioeltaOscuro !important;
 }
 
 // 1024, 768, 580
