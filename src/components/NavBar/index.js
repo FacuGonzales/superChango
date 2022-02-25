@@ -7,7 +7,6 @@ import RestaurantIcon from '@mui/icons-material/Restaurant';
 import PetsIcon from '@mui/icons-material/Pets';
 import WineBarIcon from '@mui/icons-material/WineBar';
 import SanitizerIcon from '@mui/icons-material/Sanitizer';
-import HomeIcon from '@mui/icons-material/Home';
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import DehazeIcon from '@mui/icons-material/Dehaze';
 import CloseIcon from '@mui/icons-material/Close';
@@ -20,17 +19,14 @@ const NavBar = () => {
 
     const [isOpen, setIsOpen] = useState(false);
 
-    const toggleOpen = () => {
-        setIsOpen(!isOpen);
-        console.log(isOpen)
-    }
+    const toggleOpen = () => setIsOpen(!isOpen);
     
     return(
         <nav className="navBar">
             <div className='navBar__navBarWrapper'>
 
                 <Link to="/">
-                    <img src={logo} className="navBar__navBarWrapper--logo"/>
+                    <img src={logo} className="navBar__navBarWrapper--logo" alt="img"/>
                 </Link>
 
                 <div className="navBar__navBarWrapper--buttonBurguer">

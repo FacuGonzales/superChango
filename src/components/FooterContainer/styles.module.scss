@@ -1,0 +1,30 @@
+@import "../../styles/mxin/mixin.scss";
+@import "../../styles/variables/colors.scss";
+
+.container {
+  background-color: #49426c;
+  padding: 25px;
+  text-align: center;
+}
+
+.text {
+  @include font-group(Arial, 1.5rem, bold, $colorNaranjaPastel);
+}
+
+@media (max-width: 1024px) {
+  .text {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 780px) {
+  .text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 580px) {
+  .text {
+    font-size: 0.8rem;
+  }
+}

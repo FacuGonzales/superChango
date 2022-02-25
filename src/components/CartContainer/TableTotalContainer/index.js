@@ -27,15 +27,6 @@ const TotalContainer = () => {
         
     }, [items])
 
-
-    // const count = ( () => {
-        
-    // })
-
-    // const price = ( () => {
-        
-    // })
-
     return(
         <TableContainer className={styles.containerPrice}>
             <Table className={styles.table}>

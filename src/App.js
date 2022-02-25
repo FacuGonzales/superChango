@@ -10,6 +10,7 @@ import CartProvider from './components/Context';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import ItemListContainer from "./components/ItemListContainer";
 import FormContainer from "./components/FormContainer";
+import FooterContainer from "./components/FooterContainer";
 
 
 function App() {
@@ -26,6 +27,8 @@ function App() {
           <Route path="/carrito" element={ <CartContainer/> } />
           <Route path="/confirm" element={ <FormContainer/> } />
         </Routes>
+
+        <FooterContainer/>
       </CartProvider>
     </BrowserRouter>
   );

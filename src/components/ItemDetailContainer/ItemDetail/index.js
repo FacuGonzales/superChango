@@ -8,9 +8,7 @@ import styles from './styles.module.scss';
 import ItemCount from '../../ItemCount';
 import { CartContext } from '../../Context';
 
-
 const ItemDetail = ({item}) => {
-
     const [ confirm, setConfirm ] = useState(false);
     const { addItem }  = useContext(CartContext);
     
@@ -19,7 +17,6 @@ const ItemDetail = ({item}) => {
 
         if (cant > 0) addItem(item, cant);
     }
-
 
     return(
         <div className={styles.container}>

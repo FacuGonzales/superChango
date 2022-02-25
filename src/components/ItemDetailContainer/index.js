@@ -17,7 +17,6 @@ const ItemDetailContainer = () => {
 
     return (
         <span>
-
             { !item.id ?
                 <LoadingComponent/> 
                 :

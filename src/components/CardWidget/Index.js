@@ -13,8 +13,6 @@ const CardWidget = () => {
         let cantidad = 0;
         items.forEach(i => cantidad += i.amount)
         setItemsCount(cantidad);
-            // setItemsCount(totalItems);
-        
     }, [items])
 
     return(
